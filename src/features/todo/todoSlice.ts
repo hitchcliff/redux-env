@@ -7,7 +7,6 @@ import { Todo } from "../../App";
 
 export const todoAdapter = createEntityAdapter<Todo>({
   selectId: (todo) => todo.id,
-  sortComparer: (a, b) => b.title.localeCompare(a.title),
 });
 
 export const todoSlice = createSlice({
