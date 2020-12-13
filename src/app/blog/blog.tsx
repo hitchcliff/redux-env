@@ -1,13 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Layout, Typography } from "antd";
-import { DocumentData } from "@firebase/firestore-types";
-import AddBlog from "./addBlog";
-import PostsContent from "./posts";
-import { firestore } from "../../firebase";
-import { BlogService } from "../../api";
-import useBlogService from "../Hooks/useBlogService";
-import { useDispatch } from "react-redux";
-import { fetchAllBlogs } from "../../features/blog/post.thunk";
+import AddBlog from "./AddBlog";
+import PostsContent from "./Posts";
 
 const { Title } = Typography;
 const { Content } = Layout;

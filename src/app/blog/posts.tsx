@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Card, Col, Row, Typography } from "antd";
 import { HighlightOutlined } from "@ant-design/icons";
-import { Posts } from "../blog.types";
+import { Posts } from "./blog.types";
 import { DocumentData } from "@firebase/firestore-types";
 import useBlogService from "../Hooks/useBlogService";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchAllBlogs } from "../../features/blog/post.thunk";
 import { selectAllBlogSelector } from "../../features/blog/post.selector";
+import { fetchAllBlogs } from "../../features/blog/post.slice";
 
 const { Meta } = Card;
 const { Paragraph } = Typography;

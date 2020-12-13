@@ -1,1 +1,1 @@
-export { default as BlogService } from "./BlogService/blogService";
+export { default as BlogService } from "./BlogService/BlogService";

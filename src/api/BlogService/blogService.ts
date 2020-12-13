@@ -2,8 +2,8 @@ import {
   FirebaseFirestore,
   CollectionReference,
 } from "@firebase/firestore-types";
-import { Dispatch } from "redux";
-import { Posts } from "../../app/blog.types";
+import { Dispatch } from "@reduxjs/toolkit";
+import { Posts } from "../../app/Blog/blog.types";
 import { addTodo, destroyTodo } from "../../features/blog/post.slice";
 import Store from "../../Store";
 
@@ -44,10 +44,7 @@ export default class BlogService {
   }
 
   async destroyBlog(id: string) {
-    const docRef = await this.postsRef.doc(id).delete();
-
+    await this.postsRef.doc(id).delete();
     this.dispatch(destroyTodo(id));
-
-    return docRef;
   }
 }
